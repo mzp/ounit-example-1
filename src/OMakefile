@@ -1,0 +1,19 @@
+.PHONY: all clean
+
+FILES[] =
+	fact
+	main
+
+LIB = target
+PROGRAM = main
+# OCAML_LIBS +=
+# OCAML_CLIBS +=
+# OCAML_OTHER_LIBS +=
+# OCAML_LIB_FLAGS +=
+
+.DEFAULT: $(OCamlProgram $(PROGRAM), $(FILES))
+
+OCamlLibrary($(LIB), $(FILES))
+
+clean:
+	rm -f *~ *.opt *.cmi *.cmx *.o *.omc *.cma *.cmxa $(PROGRAM) *.a
